@@ -1,0 +1,6 @@
+*.pyc
+
+/caches
+*.sqlite3
+configs.py
+.vscode/*

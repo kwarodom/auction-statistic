@@ -1,0 +1,8 @@
+<h1>{{ username }} ()</h1>
+<ul>
+{% for product in products %}
+    <li><a href="/admin/auction/product/?q={{ product.item_id }}">{{ product.item_id }}</a> - <a href="/admin/auction/product/?q={{ product.item_name }}">{{ product.item_name }}</a> ({{ product.item_price }}) - {{ product.item_bids }}</li>
+{% empty %}
+    <li>No products yet.</li>
+{% endfor %}
+</ul>

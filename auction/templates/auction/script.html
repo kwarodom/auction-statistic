@@ -1,0 +1,21 @@
+{% load staticfiles %}
+<html>
+<head>
+    <script src="{% static 'js/jquery-3.1.0.js' %}"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css'%}">
+    <title>{{ product.item_id }} - {{ product.item_name }}</title>
+    {% include "auction/graph_plot.html" %}
+    <style>
+    </style>
+</head>
+<body>
+<h1>Products ({{ count }})</h1>
+<ul>
+{% for product in products %}
+    <li><a href="/admin/auction/product/?q={{ product.item_id }}">{{ product.item_id }}</a> - <a href="/admin/auction/product/?q={{ product.item_name }}">{{ product.item_name }}</a> ({{ product.item_price }}) - {{ product.item_bids }}</li>
+{% empty %}
+    <li>No products yet.</li>
+{% endfor %}
+</ul>
+</body>
+</html>

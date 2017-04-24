@@ -1,0 +1,34 @@
+{% load staticfiles %}
+<html>
+<head>
+    <script src="{% static 'js/jquery-3.1.0.js' %}"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css'%}">
+    <title>{{ product.item_id }} - {{ product.item_name }}</title>
+    {% include "auction/graph_plot.html" %}
+    <style>
+    </style>
+</head>
+<body>
+
+<div class="container-fluid text-center">
+    <div class="col-lg-12">
+    <h3><a href="/admin/auction/criteria/?q={{ product.item_id }}">{{ product.item_id }}</a> - <a href="/admin/auction/product/?q={{ product.item_name }}">{{ product.item_name }}</a></h3>
+    <a href="http://www.bidpluz.com/productdetails.php?aid={{ product.item_id }}"><img src="http://www.bidpluz.com/{{ product.item_image }}" alt=""></a>
+    </div>
+    {% comment %}<div class="col-lg-1">
+        <table class="table table-condensed table-hover">
+            <tbody>
+                <tr><td>ALL</td><td>{{ sum_bid }}</td></tr>
+            {% for u, b in users.items %}
+                <tr><td><a href="/admin/auction/product/?q={{ u }}">{{ u }}</a></td><td>{{ b }}</td></tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>{% endcomment %}
+    <div class="col-lg-12">
+        <div id="container" style="min-height: {{ height }}px; min-width: 1800px; margin: 0 auto"></div>
+    </div>
+
+</div>
+</body>
+</html>

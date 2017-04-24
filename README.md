@@ -1,4 +1,4 @@
-# auction-statistic
+# Auction Statistic
 Statistic of some auction site.
 Using Web Scrapping Technique, Django, Highcharts
 

@@ -1,5 +1,7 @@
 # auction-statistic
 Statistic of some auction site.
+Using Web Scrapping Technique, Django, Highcharts
+
 
 ### Individual product with bid timeline.
 ![alt tag](https://github.com/StrikerUnit/auction-statistic/blob/master/images/product.png)
@@ -9,5 +11,6 @@ Statistic of some auction site.
 
 ### Search Product
 ![alt tag](https://github.com/StrikerUnit/auction-statistic/blob/master/images/admin.png)
+
 
 Note: sorry for unorganized code structure.
